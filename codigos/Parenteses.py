@@ -1,38 +1,48 @@
 def validacao_de_parenteses( expressao ):
 
     """
-    Desafio Validação de Parênteses:
-    - Recebe uma string contendo apenas os caracteres '(', ')', '{', '}', '[' e ']'.
-    - Verifica se toda abertura de parênteses tem o fechamento correspondente na ordem correta.
+
+    **Validação de Parênteses**: Verifica se uma expressão contendo parênteses é válida, ou seja, todos os parênteses de abertura têm um correspondente de fechamento na ordem correta.
+
+    **Funcionamento**:
+
+    - Cria um dicionário para mapear os parênteses de fechamento aos seus respectivos parênteses de abertura.
+    - Inicializa uma pilha vazia para armazenar os parênteses de abertura encontrados
+    - Percorre cada caractere na expressão:
+        - Se o caractere for um parêntese de abertura, adiciona-o à pilha.
+        - Se for um parêntese de fechamento, verifica se a pilha está vazia ou se o topo da pilha não corresponde ao parêntese de abertura esperado. Se qualquer uma dessas condições for verdadeira, retorna False.
+        - Se corresponder, remove o parêntese de abertura do topo da pilha.
+    - Após percorrer toda a expressão, verifica se a pilha está vazia. Se estiver, todos os parênteses foram fechados corretamente e retorna True; caso contrário, retorna False.
 
     :param expressao: (str) String contendo os parênteses a serem validados.
     :return: (bool) True se a expressão for válida, False caso contrário.
+
     """
 
-    correspondencias = { ')': '(', '}': '{', ']': '[' } # Mapeia os parênteses de fechamento com seus respectivos parênteses de abertura.
-    pilha = [] # Cria uma pilha para armazenar os parênteses de abertura.
+    correspondencias = { ')': '(', '}': '{', ']': '[' }
+    pilha = []
 
-    for char in expressao: # Loop através de cada caractere na expressão.
+    for parentese in expressao:
 
-        if char in correspondencias.values(): pilha.append( char ) # Se o caractere for um parêntese de abertura, adiciona à pilha.
+        if parentese in correspondencias.values(): pilha.append( parentese )
 
-        elif char in correspondencias.keys(): # Se for um parêntese de fechamento, verifica se há um correspondente na pilha.
+        elif parentese in correspondencias.keys():
             
-            if not pilha or pilha[-1] != correspondencias[ char ]: return False # Se a pilha estiver vazia ou o topo não corresponder, retorna False.
+            if not pilha or pilha[-1] != correspondencias[ parentese ]: return False
             
-            pilha.pop() # Caso contrário, remove o parêntese de abertura correspondente do topo da pilha.
+            pilha.pop()
 
-    return len( pilha ) == 0 # Retorna True se a pilha estiver vazia, ou seja, todos os parênteses foram fechados corretamente.
+    return len( pilha ) == 0
 
 def main():
 
     expressoes_teste = [ "{[()]}", "{[(])}", "{{[[(]]}}" ]
 
-    for expressao in expressoes_teste: # Loop através das expressões de teste.
+    for expressao in expressoes_teste:
 
-        if validacao_de_parenteses( expressao ): print( f"A expressão '{expressao}' é válida." ) # Saída se for válida.
+        if validacao_de_parenteses( expressao ): print( f"A expressão '{expressao}' é válida." )
 
-        else: print( f"A expressão '{expressao}' não é válida." ) # Saída se não for válida.
+        else: print( f"A expressão '{expressao}' não é válida." )
 
     return None
 

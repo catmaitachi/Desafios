@@ -1,27 +1,34 @@
 def verificador_de_palindromo( palavra ):
     
     """
-    Desafio Verificador de Palíndromo: 
-    - Recebe uma palavra e verifica se é um palíndromo.
+    
+    **Verificador de Palíndromos**: Verifica se uma palavra é um palíndromo *(é igual se lida de trás para frente)*.
 
-    :param palavra: (str) Palavra a ser verificada.
-    :return: (bool) True se for palíndromo, False caso contrário.
+    **Funcionamento**:
+
+    - Converte a palavra para minúsculas para garantir que a verificação seja case-insensitive.
+    - Inverte a palavra utilizando slicing.
+    - Retorna um comparativo entre a palavra original e a palavra invertida.
+    
+    :param palavra: (str) palavra a ser verificada
+    :return: (bool) true se for palíndromo, false caso contrário.
+    
     """
 
-    palavra = palavra.lower() # Converte a palavra para minúsculas para garantir a comparação sem case sensitivity.
-    palavra_invertida = palavra[::-1] # Inverte a palavra usando slicing.
+    palavra = palavra.lower()
+    palavra_invertida = palavra[::-1]
 
-    return palavra == palavra_invertida # Compara a palavra original com a invertida para ver se são iguais.
+    return palavra == palavra_invertida
 
 def main():
 
-    palavras_teste = [ "Arara" , "Ovo" , "Casa" , "Biscoito" , "Scooby" ] # Lista de palavras para serem testadas.
+    palavras_teste = [ "Arara" , "Ovo" , "Casa" , "Biscoito" , "Scooby" ]
 
-    for palavra in palavras_teste: # Loop através da lista de palavras.
+    for palavra in palavras_teste:
 
-        if verificador_de_palindromo( palavra ): print( f'"{palavra}" é um palíndromo.' ) # Saída se for palíndromo.
+        if verificador_de_palindromo( palavra ): print( f'"{palavra}" é um palíndromo.' )
 
-        else: print( f'"{palavra}" não é um palíndromo.' ) # Saída se não for palíndromo.
+        else: print( f'"{palavra}" não é um palíndromo.' )
 
     return None
 

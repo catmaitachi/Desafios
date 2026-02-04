@@ -1,22 +1,31 @@
 def manipulacao_de_dados( lista ):
 
     """
-    Agrupa os dados presentes em uma lista de objetos com atributos "categoria" e "valor".
+
+    **Manipulação de Dados**: Agrupa uma lista de objetos por uma propriedade "*categoria*" e calcula a soma de outra propriedade "*valor*" para cada grupo.
+
+    **Funcionamento**:
+
+    - Cria um dicionário vazio para armazenar os dados agrupados.
+    - Percorre cada objeto na lista fornecida:
+        - Extrai a categoria e o valor do objeto.
+        - Adiciona o valor à soma correspondente à categoria no dicionário.
 
     :param lista: (list) lista de objetos
-    :return dados_agrupados: (obj) dados agrupados em um objeto
+    :return dicionario: (dict) dados agrupados em um dicionário
+
     """
 
-    dados_agrupados = {} 
+    dicionario = {} 
 
     for item in lista:
 
         categoria = item.categoria.lower()
         valor = item.valor
 
-        dados_agrupados[categoria] = dados_agrupados.get(categoria, 0) + valor
+        dicionario[categoria] = dicionario.get(categoria, 0) + valor
 
-    return dados_agrupados
+    return dicionario
 
 def main():
 
