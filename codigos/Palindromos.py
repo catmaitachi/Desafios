@@ -1,4 +1,4 @@
-def verificador_de_palindromo( palavra ):
+def verificador_de_palindromo( palavra: str ) -> bool:
     
     """
     
@@ -33,7 +33,5 @@ def main():
         if verificador_de_palindromo( palavra ): print( f'"{palavra}" é um palíndromo.' )
 
         else: print( f'"{palavra}" não é um palíndromo.' )
-
-    return None
 
 if __name__ == "__main__": main()

@@ -1,4 +1,6 @@
-def encontrar_duplicados( lista ):
+from typing import List
+
+def encontrar_duplicados( lista: List[int] ) -> List[int]:
 
     """
     
@@ -22,8 +24,8 @@ def encontrar_duplicados( lista ):
     
     """
 
-    verificados = set()
-    duplicados  = []
+    verificados: set[int] = set()
+    duplicados: List[int] = []
 
     for numero in lista: 
 
@@ -40,7 +42,5 @@ def main():
     duplicados_encontrados = encontrar_duplicados( lista_teste )
 
     print( f"Números duplicados encontrados: {duplicados_encontrados}" )
-
-    return None
 
 if __name__ == "__main__": main()

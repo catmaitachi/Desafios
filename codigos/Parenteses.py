@@ -1,4 +1,4 @@
-def validacao_de_parenteses( expressao ):
+def validacao_de_parenteses( expressao: str ) -> bool:
 
     """
 
@@ -23,8 +23,8 @@ def validacao_de_parenteses( expressao ):
 
     """
 
-    correspondencias = { ')': '(', '}': '{', ']': '[' }
-    pilha = []
+    correspondencias: dict[str, str] = { ')': '(', '}': '{', ']': '[' }
+    pilha: list[str] = []
 
     for parentese in expressao:
 
@@ -47,7 +47,5 @@ def main():
         if validacao_de_parenteses( expressao ): print( f"A expressão '{expressao}' é válida." )
 
         else: print( f"A expressão '{expressao}' não é válida." )
-
-    return None
 
 if __name__ == "__main__": main()

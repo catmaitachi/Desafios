@@ -1,4 +1,13 @@
-def manipulacao_de_dados( lista ):
+from typing import List
+
+class Item():
+
+    def __init__(self, categoria: str, valor: float | int):
+
+        self.categoria = categoria
+        self.valor = valor
+
+def manipulacao_de_dados( lista: List[Item] ) -> dict[str, float | int]:
 
     """
 
@@ -20,7 +29,7 @@ def manipulacao_de_dados( lista ):
 
     """
 
-    dicionario = {} 
+    dicionario: dict[str, float | int] = {} 
 
     for item in lista:
 
@@ -33,19 +42,10 @@ def manipulacao_de_dados( lista ):
 
 def main():
 
-    class Item:
-
-        def __init__(self, categoria, valor):
-
-            self.categoria = categoria
-            self.valor = valor
-
     lista_teste = [ Item("Alimentação", 10), Item("Transporte", 5), Item("Alimentação", 20), Item("Lazer", 50) ]
 
     resultado = manipulacao_de_dados( lista_teste )
 
     print( f"Dados agrupados: {resultado}" )
-
-    return None
 
 if __name__ == "__main__": main()

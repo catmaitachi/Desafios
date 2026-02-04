@@ -1,4 +1,4 @@
-def fizzbuzz( inicio, fim ):
+def fizzbuzz( inicio: int, fim: int ) -> None:
     
     """
 
@@ -41,7 +41,5 @@ def fizzbuzz( inicio, fim ):
 def main():
     
     fizzbuzz( 1, 100 )
-
-    return None
 
 if __name__ == "__main__": main()
