@@ -13,7 +13,7 @@
 
 ## 👀 Visão Geral
 
-Esse repositório contém uma coleção de desafios de programação resolvidos em Python, feito como desafio técnico para ingressar na Bolsa de Pesquisa da [DataViva](https://www.dataviva.info/). 
+Este repositório contém uma coleção de desafios de programação resolvidos em Python, feita como desafio técnico para ingressar na Bolsa de Pesquisa da [DataViva](https://www.dataviva.info/).
 
 ## 🧩 Os desafios
 
@@ -24,9 +24,9 @@ Escreva um programa que imprima os números de 1 a 100.
 * Para números múltiplos de **3 e 5** ao mesmo tempo, imprima `FizzBuzz`.
 
 ### 2. [Verificador de Palíndromos](codigos/Palindromos.py)
-Crie uma função que receba uma palavra (string) e retorne `true` se ela for um palíndromo e `false` caso contrário.
+Crie uma função que receba uma palavra (string) e retorne `True` se ela for um palíndromo e `False` caso contrário.
 * *Definição:* Palíndromo é uma palavra que pode ser lida da mesma forma de trás para frente.
-* **Exemplos:** `"arara"` (true), `"ovo"` (true), `"casa"` (false).
+* **Exemplos:** `"arara"` (True), `"ovo"` (True), `"casa"` (False).
 
 ### 3. [Encontrar Duplicados](codigos/Duplicados.py)
 Dada uma lista de números inteiros, escreva uma função que identifique e retorne o número que aparece repetido.
@@ -55,7 +55,7 @@ Dado um array de objetos representando transações:
   { "categoria": "Lazer", "valor": 50 }
 ]
 ```
-Escreva uma função que retorne um objeto (ou dicionário) somando os valores por categoria.
+Escreva uma função que retorne um objeto (ou dicionário) com a soma dos valores por categoria.
 
 * **Saída Esperada:** 
 
