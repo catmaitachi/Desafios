@@ -24,7 +24,7 @@ def validacao_de_parenteses( expressao ):
 
     return len( pilha ) == 0 # Retorna True se a pilha estiver vazia, ou seja, todos os parênteses foram fechados corretamente.
 
-def __main__():
+def main():
 
     expressoes_teste = [ "{[()]}", "{[(])}", "{{[[(]]}}" ]
 
@@ -36,4 +36,4 @@ def __main__():
 
     return None
 
-__main__()
+if __name__ == "__main__": main()

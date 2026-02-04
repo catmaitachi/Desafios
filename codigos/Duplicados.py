@@ -20,7 +20,7 @@ def encontrar_duplicados( lista ):
 
     return duplicados # Retorna a lista de números duplicados.
 
-def __main__():
+def main():
 
     lista_teste = [ 1, 2, 3, 4, 2, 5 ] # Lista de números para teste.
 
@@ -30,4 +30,4 @@ def __main__():
 
     return None
 
-__main__()
+if __name__ == "__main__": main()

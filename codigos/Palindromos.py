@@ -13,7 +13,7 @@ def verificador_de_palindromo( palavra ):
 
     return palavra == palavra_invertida # Compara a palavra original com a invertida para ver se são iguais.
 
-def __main__():
+def main():
 
     palavras_teste = [ "Arara" , "Ovo" , "Casa" , "Biscoito" , "Scooby" ] # Lista de palavras para serem testadas.
 
@@ -25,4 +25,4 @@ def __main__():
 
     return None
 
-__main__()
+if __name__ == "__main__": main()
