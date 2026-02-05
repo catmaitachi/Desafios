@@ -15,7 +15,17 @@
 
 Este repositório contém uma coleção de desafios de programação resolvidos em Python, feita como parte de um desafio técnico para ingressar na Bolsa de Pesquisa da [DataViva](https://www.dataviva.info/).
 
-## 🧩 Os desafios
+## 💡 Organização de Ideias
+
+Para cada desafio descrito abaixo, é possível encontrar um arquivo Python correspondente na pasta `codigos/` linkado ao título.
+
+Por fins de documentação e clareza, cada arquivo contém nas respectivas funções uma *docstring* detalhada com:
+
+- Uma breve descrição do desafio resolvido.
+- O funcionamento do código, passo a passo.
+- O raciocínio que tive ao longo do desenvolvimento.
+
+## 🧩 Os Desafios
 
 ### 1. [O Clássico FizzBuzz](codigos/FizzBuzz.py)
 Escreva um programa que imprima os números de 1 a 100.
