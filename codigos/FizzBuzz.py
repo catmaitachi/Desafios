@@ -1,45 +1,66 @@
-def fizzbuzz( inicio: int, fim: int ) -> None:
+def fizzbuzz( numero: int ) -> str | None:
     
     """
 
-    **FizzBuzz**: Imprime os números de um intervalo (*inicio* a *fim*) com as seguintes regras:
-
-    - Para múltiplos de 3, imprime "Fizz" ao lado do número.
-    - Para múltiplos de 5, imprime "Buzz" ao lado do número.
-    - Para múltiplos de ambos 3 e 5, imprime "FizzBuzz" ao lado do número.
+    **FizzBuzz**: Analisa um número e retorna "Fizz" se for múltiplo de 3, "Buzz" se for múltiplo de 5 e "FizzBuzz" se for múltiplo de ambos. Se não for múltiplo de nenhum, retorna None.
 
     **⚙️ Funcionamento**:
     
-    - Cria um loop que percorre um a um os números do intervalo (*inicio* a *fim*).
-        - Para cada número:
-            - Verifica se é múltiplo de 3 e 5, imprimindo "FizzBuzz" se verdadeiro.
-            - Verifica se é múltiplo de 3, imprimindo "Fizz" se verdadeiro.
-            - Verifica se é múltiplo de 5, imprimindo "Buzz" se verdadeiro.
-            - Se não for múltiplo de nenhum, apenas imprime o número.
+    - Para cada número:
+        - Verifica se é múltiplo de 3 e 5, retornando "FizzBuzz" se verdadeiro.
+        - Verifica se é múltiplo de 3, retornando "Fizz" se verdadeiro.
+        - Verifica se é múltiplo de 5, retornando "Buzz" se verdadeiro.
+        - Se não for múltiplo de nenhum, retorna None.
 
     **🧠 Raciocínio**:
 
-    O algoritmo é simples e direto: preciso de um loop (*for* parece mais adequado para intervalos) e de condicionais para verificar os múltiplos usando *%*. O mais importante é a ordem das verificações: primeiro verificar os múltiplos de ambos (3 e 5) para evitar que sejam classificados apenas como múltiplos de 3 ou 5. É possível melhorar a função, blindando-a com verificações nos parâmetros — o que seria ideal dependendo do cenário de uso —, mas, para o propósito do desafio, a implementação direta me parece suficiente.
+    O algoritmo é simples e direto: ele deve verificar algumas condicionais a respeito do número. O mais importante é garantir a ordem correta das verificações, começando pelo caso mais específico (múltiplo de ambos) e depois os casos individuais. Se o número não atender a nenhuma das condições, retornamos None para indicar que ele não é múltiplo de 3 ou 5.
 
-    :param inicio: (int) início do intervalo
-    :param fim: (int) final do intervalo
+    :param numero: número a ser verificado.
+    :type numero: int
+    :return: "Fizz", "Buzz", "FizzBuzz" ou None
+    :rtype: str | None
 
     """
 
-    for i in range( inicio, fim + 1 ):
+    if numero % 3 == 0 and numero % 5 == 0: return "FizzBuzz"
 
-        if i % 3 == 0 and i % 5 == 0: print( str(i) + " - FizzBuzz" )
+    elif numero % 3 == 0: return "Fizz"
 
-        elif i % 3 == 0: print( str(i) + " - Fizz" )
+    elif numero % 5 == 0: return "Buzz"
 
-        elif i % 5 == 0: print( str(i) + " - Buzz" )
+    else: return None 
 
-        else: print( str(i) )
+def impressora_fizzbuzz( numero: int, fim: int ) -> None:
 
-    return None
+    """
+
+    **Impressora FizzBuzz**: Imprime os números de um intervalo, adicionando as palavras "Fizz", "Buzz" ou "FizzBuzz" para os múltiplos de 3, 5 ou ambos, respectivamente.
+
+    **⚙️ Funcionamento**:
+
+    - Para cada número no intervalo:
+        - Chama a função `fizzbuzz` para obter a string correspondente.
+        - Imprime o número seguido da string retornada (se houver).
+        - Usa recursão para continuar imprimindo os próximos números até atingir o `fim` do intervalo.
+
+    **🧠 Raciocínio**:
+
+    Funciona como uma extensão da função `fizzbuzz`, onde iteramos por um intervalo de números e para cada um, chamamos `fizzbuzz` para determinar o que deve ser impresso junto ao número. A recursão garante que o processo continue até atingir o `fim` do intervalo.
+    
+    :param numero: início do intervalo.
+    :type numero: int
+    :param fim: fim do intervalo.
+    :type fim: int
+
+    """
+    
+    print( f"{numero}: {fizzbuzz(numero) or ''}" )
+
+    if numero < fim: impressora_fizzbuzz( numero + 1, fim )
 
 def main():
     
-    fizzbuzz( 1, 100 )
+    impressora_fizzbuzz( 1, 100 )
 
 if __name__ == "__main__": main()

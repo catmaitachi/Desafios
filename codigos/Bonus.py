@@ -24,8 +24,10 @@ def manipulacao_de_dados( lista: List[Item] ) -> dict[str, float | int]:
 
     Eu acabei pensando em duas ou três formas de construir essa função, algumas um tanto complexas, mas percebi que era possível fazer isso com um código bem mais simples. Eu criei a classe `Item` para exemplificar a função, mas ela em si é genérica e pode ser aplicada a qualquer lista de objetos que tenham as propriedades "*categoria*" e "*valor*". Ela percorre a lista, catalogando as categorias e somando os valores correspondentes, criando assim um dicionário que representa a lista de objetos agrupada por categoria.
 
-    :param lista: (list) lista de objetos
-    :return dicionario: (dict) dados agrupados em um dicionário
+    :param lista: lista de objetos.
+    :type lista: List[Item]
+    :return: dados agrupados em um dicionário.
+    :rtype: dict[str, float | int]
 
     """
 

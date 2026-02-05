@@ -6,17 +6,19 @@ def verificador_de_palindromo( palavra: str ) -> bool:
 
     **⚙️ Funcionamento**:
 
-    - Converte a palavra para minúsculas para garantir que a verificação seja case-insensitive.
+    - Converte a palavra para minúsculas para garantir que a verificação não diferencie maiúsculas e minúsculas.
     - Inverte a palavra utilizando slicing.
-    - Retorna um comparativo entre a palavra original e a palavra invertida.
+    - Retorna a comparação entre a palavra original e a palavra invertida.
 
     **🧠 Raciocínio**:
 
-    Pensando em formas de verificar se uma palavra é um palíndromo, a abordagem mais direta é comparar a palavra original com a sua versão invertida. Em Python, é possível inverter uma string usando slicing (`palavra[::-1]`), o que torna tudo bem simples. Por fim, usei `palavra.lower()` para garantir que a comparação não seja sensível a maiúsculas/minúsculas; depois foi só retornar o resultado booleano.
+    Pensando em formas de verificar se uma palavra é um palíndromo, a abordagem mais direta é comparar a palavra original com a sua versão invertida. Em Python, é possível inverter uma string usando slicing (`palavra[::-1]`), o que torna tudo bem simples. Por fim, usei `palavra.lower()` para garantir que a comparação não seja sensível a maiúsculas/minúsculas; depois, foi só retornar o resultado booleano.
     
-    :param palavra: (str) palavra a ser verificada
-    :return: (bool) True se for palíndromo, False caso contrário.
-    
+    :param palavra: palavra a ser verificada
+    :type palavra: str
+    :return: True se for palíndromo, False caso contrário.
+    :rtype: bool
+
     """
 
     palavra = palavra.lower()

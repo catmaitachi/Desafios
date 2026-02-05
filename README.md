@@ -13,7 +13,7 @@
 
 ## 👀 Visão Geral
 
-Este repositório contém uma coleção de desafios de programação resolvidos em Python, feita como desafio técnico para ingressar na Bolsa de Pesquisa da [DataViva](https://www.dataviva.info/).
+Este repositório contém uma coleção de desafios de programação resolvidos em Python, feita como parte de um desafio técnico para ingressar na Bolsa de Pesquisa da [DataViva](https://www.dataviva.info/).
 
 ## 🧩 Os desafios
 

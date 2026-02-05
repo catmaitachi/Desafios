@@ -19,9 +19,11 @@ def encontrar_duplicados( lista: List[int] ) -> List[int]:
 
     Usei um conjunto para armazenar os números conforme são verificados. Assim, quando um número aparece uma segunda vez, ele é adicionado à lista de duplicados (se ainda não estiver lá).
 
-    :param lista: (list) lista de números inteiros
-    :return duplicados: (list) lista de números duplicados
-    
+    :param lista: lista de números inteiros.
+    :type lista: List[int]
+    :return: lista de números duplicados.
+    :rtype: List[int]
+
     """
 
     verificados: set[int] = set()

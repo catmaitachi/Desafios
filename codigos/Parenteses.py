@@ -18,8 +18,10 @@ def validacao_de_parenteses( expressao: str ) -> bool:
 
     Isso deu uma pequena dor de cabeça inicial, mas percebi que dá para usar uma pilha para resolver o problema. Primeiro, criei alguns pares ordenados de parênteses para comparar aberturas e fechamentos; depois disso, basta passar por cada caractere da string: se detectar um parêntese de abertura, adiciona à pilha; se detectar um parêntese de fechamento, verifica se o topo da pilha corresponde ao tipo que está fechando. Se não corresponder, a expressão é inválida; caso corresponda, remove o topo da pilha. No final, se a pilha estiver vazia, significa que todos os parênteses foram fechados corretamente; caso contrário, algum não foi fechado, tornando a expressão inválida.
     
-    :param expressao: (str) String contendo os parênteses a serem validados.
-    :return: (bool) True se a expressão for válida, False caso contrário.
+    :param expressao: string contendo os parênteses a serem validados.
+    :type expressao: str
+    :return: True se a expressão for válida, False caso contrário.
+    :rtype: bool
 
     """
 
