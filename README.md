@@ -8,22 +8,59 @@
 ```
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Python-3.11%2B-000000?logo=python&logoColor=white" alt="Python 3.11+ Badge"/>
+    <img src="https://img.shields.io/badge/Python-3.13%2B-000000?logo=python&logoColor=white" alt="Python 3.13+ Badge"/>
 </p>
 
 ## 👀 Visão Geral
 
 Este repositório contém uma coleção de desafios de programação resolvidos em Python, feita como parte de um desafio técnico para ingressar na Bolsa de Pesquisa da [DataViva](https://www.dataviva.info/).
 
-## 💡 Organização de Ideias
+## 🪄 Como Executar
 
-Para cada desafio descrito abaixo, é possível encontrar um arquivo Python correspondente na pasta `codigos/` linkado ao título.
+1. Clone o repositório:
 
-Por fins de documentação e clareza, cada arquivo contém nas respectivas funções uma *docstring* detalhada com:
+```bash
+git clone https://github.com/catmaitachi/Desafio_DataViva.git
+```
 
-- Uma breve descrição do desafio resolvido.
-- O funcionamento do código, passo a passo.
-- O raciocínio que tive ao longo do desenvolvimento.
+2. Instale o Python:
+
+* Na [Microsoft Store](https://apps.microsoft.com/detail/9pnrbtzxmb4z?hl=pt-BR&gl=BR).
+* Ou em [python.org](https://www.python.org/downloads/). 
+
+3. Execute os desafios na pasta `codigos/`:
+
+```bash
+cd ./Desafio_DataViva/codigos/
+
+python FizzBuzz.py
+python Palindromos.py
+python Duplicados.py
+python Parenteses.py
+python Bonus.py
+```
+
+## 💡 Ideias, Decisões e Opiniões
+
+Para cada desafio descrito abaixo, é possível encontrar um arquivo Python correspondente na pasta `codigos/`, linkado ao título.
+
+Por fins de documentação e clareza, cada arquivo contém, nas respectivas funções, uma *docstring* que as torna autoexplicativas, com os seguintes detalhes:
+
+* Uma breve descrição do desafio resolvido.
+* O funcionamento do código, passo a passo.
+* O raciocínio utilizado ao longo do desenvolvimento.
+
+> "Adorei documentar nesse padrão. Ainda é possível adicionar à docstring seções como 'exemplos' e 'observações', o que pode ser bem útil dependendo do ambiente ou da equipe de desenvolvimento."
+
+Para garantir maior robustez às funções, foi adicionada tipagem Python, oferecendo assim uma *blindagem* contra entradas indevidas.
+
+Ademais, tentei ao máximo seguir práticas de [código limpo](https://share.google/SMLc9UAp8RuZ66eDo) ao longo do desenvolvimento e das refatorações que fui realizando, buscando deixar perceptível:
+
+* Clareza nos nomes de variáveis e funções.
+* Algoritmos simples aos olhos.
+* Funções diretas e eficientes.
+
+> "Queria fazer uma rápida menção aos esforços para aplicar os princípios SOLID; contudo, na minha visão, o escopo do desafio permite apenas exercitar alguns, como SRP e OCP."
 
 ## 🧩 Os Desafios
 
