@@ -31,7 +31,7 @@ def fizzbuzz( numero: int ) -> str | None:
 
     else: return None 
 
-def impressora_fizzbuzz( numero: int, fim: int ) -> None:
+def impressora_fizzbuzz( iteracoes: int ) -> None:
 
     """
 
@@ -39,28 +39,27 @@ def impressora_fizzbuzz( numero: int, fim: int ) -> None:
 
     **⚙️ Funcionamento**:
 
-    - Para cada número no intervalo:
-        - Chama a função `fizzbuzz` para obter a string correspondente.
-        - Imprime o número seguido da string retornada (se houver).
-        - Usa recursão para continuar imprimindo os próximos números até atingir o `fim` do intervalo.
+    - Inicia um loop para iterar de 1 até o número de `iterações` especificado.
+        - Para cada número no intervalo:
+            - Chama a função `fizzbuzz` para obter a string correspondente.
+            - Imprime o número seguido da string retornada (se houver).
 
     **🧠 Raciocínio**:
 
-    Funciona como uma extensão da função `fizzbuzz`, onde iteramos por um intervalo de números e para cada um, chamamos `fizzbuzz` para determinar o que deve ser impresso junto ao número. A recursão garante que o processo continue até atingir o `fim` do intervalo.
+    Funciona como uma extensão da função `fizzbuzz`, onde iteramos por um intervalo de números e para cada um, chamamos `fizzbuzz` para determinar o que deve ser impresso junto ao número.
     
-    :param numero: início do intervalo.
-    :type numero: int
-    :param fim: fim do intervalo.
-    :type fim: int
+    :param iteracoes: número de iterações a serem impressas.
+    :type iteracoes: int
 
     """
-    
-    print( f"{numero}: {fizzbuzz(numero) or ''}" )
 
-    if numero < fim: impressora_fizzbuzz( numero + 1, fim )
+    for numero in range( 1, iteracoes + 1 ):
+
+        print( f"{numero}: {fizzbuzz(numero) or ''}" )
+
 
 def main():
     
-    impressora_fizzbuzz( 1, 100 )
+    impressora_fizzbuzz( 100 )
 
 if __name__ == "__main__": main()
